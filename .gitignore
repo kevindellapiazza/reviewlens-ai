@@ -1,0 +1,17 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.pyc
+
+# Virtual environment
+.venv
+venv/
+ENV/
+
+# Data files -
+*.csv
+*.parquet
+
+# Terraform files
+.terraform/
+*.tfstate
+*.tfstate.backup
