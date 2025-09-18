@@ -3,11 +3,11 @@ __pycache__/
 *.pyc
 
 # Virtual environment
-.venv
+.venv/
 venv/
 ENV/
 
-# Data files -
+# Data files
 *.csv
 *.parquet
 
@@ -16,5 +16,13 @@ ENV/
 *.tfstate
 *.tfstate.backup
 
-# Ignore Jupyter Notebook checkpoints
+# Jupyter Notebook checkpoints
 .ipynb_checkpoints/
+
+# Build artifacts directory
+/dist/
+
+# Ignore installed packages inside Lambda source directories
+src/splitter_lambda/*
+!src/splitter_lambda/main.py
+!src/splitter_lambda/requirements.txt
