@@ -2,3 +2,4 @@ pandas
 transformers
 torch
 awswrangler[s3]
+boto3

@@ -1,5 +1,5 @@
 # Stage 1: Choose the base
-FROM public.ecr.aws/lambda/python:3.9
+FROM public.ecr.aws/lambda/python:3.12
 
 # Stage 2: Copy the necessary files into the box.
 COPY requirements.txt .
