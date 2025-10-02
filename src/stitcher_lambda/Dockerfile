@@ -1,5 +1,5 @@
 # Use the official AWS base image for Python
-FROM public.ecr.aws/lambda/python:3.9
+FROM public.ecr.aws/lambda/python:3.12
 
 # Copy the requirements file
 COPY requirements.txt .

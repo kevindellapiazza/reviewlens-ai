@@ -1,1 +1,2 @@
 awswrangler[s3]
+boto3
