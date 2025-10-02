@@ -26,3 +26,7 @@ ENV/
 src/splitter_lambda/*
 !src/splitter_lambda/main.py
 !src/splitter_lambda/requirements.txt
+
+src/status_checker_lambda/*
+!src/status_checker_lambda/main.py
+!src/status_checker_lambda/requirements.txt
