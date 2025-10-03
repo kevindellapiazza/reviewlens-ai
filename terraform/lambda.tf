@@ -178,7 +178,7 @@ resource "aws_lambda_function" "processor_lambda" {
   package_type  = "Image"
   image_uri     = "${aws_ecr_repository.processor_lambda_repo.repository_url}:latest"
   timeout       = 900
-  memory_size   = 10240
+  memory_size   = 3008
   ephemeral_storage {
     size = 2048
   }
