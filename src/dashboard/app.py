@@ -19,15 +19,22 @@ if 'page' not in st.session_state:
 if 'job_id' not in st.session_state:
     st.session_state.job_id = None
 
-# --- AWS Configuration ---
-# Cache the S3 client for performance
+# --- AWS Configuration using Streamlit Secrets ---
+# Cache the clients for performance
 @st.cache_resource
 def get_s3_client():
-    # In a real production app, you would configure credentials securely
-    return boto3.client('s3')
+    # This function now reads credentials securely from st.secrets
+    s3 = boto3.client(
+        's3',
+        aws_access_key_id=st.secrets["AWS_ACCESS_KEY_ID"],
+        aws_secret_access_key=st.secrets["AWS_SECRET_ACCESS_KEY"],
+        region_name=st.secrets["AWS_DEFAULT_REGION"]
+    )
+    return s3
 
-# IMPORTANT: Use your exact bucket name
-S3_BRONZE_BUCKET = "reviewlens-bronze-bucket-kevin" 
+# Get configuration from secrets
+S3_BRONZE_BUCKET = "reviewlens-bronze-bucket-kevin"
+API_URL = st.secrets["API_URL"]
 
 # =====================================================================================
 # UI Rendering Functions
