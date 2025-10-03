@@ -3,3 +3,4 @@ pandas
 plotly
 boto3
 awswrangler[s3]
+requests
