@@ -30,3 +30,7 @@ src/splitter_lambda/*
 src/status_checker_lambda/*
 !src/status_checker_lambda/main.py
 !src/status_checker_lambda/requirements.txt
+
+# Ignore pyabsa/bertopic model checkpoints and outputs
+notebooks/checkpoints/
+notebooks/*.json
